@@ -1,0 +1,19 @@
+@mixin box-shadow ($color : rgba(100, 100, 111, 0.3)){
+    box-shadow: $color 0px 3px 10px 0px;
+}
+
+@mixin box-shadow-mod ($color: lighten(rgba(100, 100, 111, 0.5), 20%)) {
+    box-shadow: $color 0px 3px 10px 0px;
+}
+
+@mixin one-edge-shadow ($color : rgba(149, 157, 165, 0.5)) {
+    box-shadow: inset 0 8px 6px -6px $color;
+}
+
+@mixin border($colour: $colour-primary) {
+    border: .1rem solid $colour;
+}
+
+@mixin padding($screen) {
+    padding: 0 map-get($padding, $screen);
+}

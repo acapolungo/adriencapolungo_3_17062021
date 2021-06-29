@@ -1,0 +1,50 @@
+.operation {
+    width: 100%;
+    @include padding(mobile);
+    display: flex;
+    flex-wrap: wrap;
+    &__title {
+        padding-top: rem(53);
+        font-size: rem(28);
+        margin-bottom: rem(33);
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+        width: rem(322);
+        background: $grey-bg;
+        border-radius: rem(15);
+        padding: rem(20);
+        margin-left: rem(15);
+        margin-bottom: rem(22.5);
+        @include box-shadow-mod;
+    }
+    &__num {
+        position: absolute;
+        left: -10px;
+        color: #ffffff;
+        background-color: $colour-primary;
+        width: rem(22);
+        height: rem(22);
+        line-height: rem(22);
+        border-radius: 50%;
+    }
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 23%;
+        height: rem(10);
+        font-size: rem(16);
+        color: $grey-icon;
+    }
+    &__info {
+        width: 75%;
+    }
+    &__txt{
+        font-size: rem(16);
+        font-weight: 600;
+    }
+}

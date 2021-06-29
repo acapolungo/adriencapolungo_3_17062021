@@ -1,0 +1,19 @@
+.discover__btn {
+        font-weight: 600;
+        font-size: rem(16);
+        border: none;
+        text-align: center;
+        padding: rem(16);
+        color: #ffffff;
+        border-radius: rem(25);
+        background: linear-gradient(165deg, $colour-secondary, $colour-primary);
+        margin-bottom: rem(56.5);
+        cursor: pointer;
+        @include box-shadow;
+        transition: all .2s ease-out;
+        &:hover {
+                background: linear-gradient(165deg, lighten($colour-secondary, 5%), lighten($colour-primary, 10%));
+                @include box-shadow-mod ($color: darken(rgba(100, 100, 111, 0.5), 30%));
+                transform: scale(1.05);
+        }
+}

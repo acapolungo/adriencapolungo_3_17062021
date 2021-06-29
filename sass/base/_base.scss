@@ -1,0 +1,22 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    font-size: $base-font-size;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #ffffff;
+}
+
+li {
+    list-style-type: none;
+}

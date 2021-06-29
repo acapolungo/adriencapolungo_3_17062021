@@ -1,0 +1,19 @@
+.header {
+    width: rem(375);
+    height: 63px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__logo {
+        font-family: 'Shrikhand',"cursive";
+        text-align: center;
+        width: 100%;
+    }
+}
+
+main {
+    width: rem(375);
+    margin: 0 auto;
+    text-align: center;
+}
