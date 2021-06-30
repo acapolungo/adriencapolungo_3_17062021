@@ -11,11 +11,11 @@ html, body {
 
 a {
     text-decoration: none;
-    &:visited {
-        color: #ffffff;
-    }
     &:active {
         color: $colour-secondary;
+    }
+    &:visited {
+        color: #ffffff;
     }
 }
 

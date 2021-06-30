@@ -31,3 +31,7 @@
         }
     }
 }
+
+@mixin resto-img ($picture) {
+    background: url('../images/restaurants/#{map-get($bg-url, $picture)}') center/cover;
+}

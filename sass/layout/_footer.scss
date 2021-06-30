@@ -1,5 +1,6 @@
 .footer {
-    width: 100%;
+    width: rem(375);
+    margin: 0 auto;
     height: 200px;
     background: $grey-footer;
     display: flex;
@@ -20,6 +21,9 @@
     }
     &__link {
         width: 100%;
+        a:visited {
+            color: #ffffff;
+        }
     }
     &__icon {
         width: rem(23);
