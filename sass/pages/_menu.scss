@@ -19,6 +19,7 @@
         @include box-shadow;
     }
     a {
+        color: #ffffff;
         text-decoration: none;
         color: inherit;
     }
@@ -69,12 +70,21 @@
     }
     &__icon {
         width: 25%;
-        display: flex;
         justify-content: center;
         align-items: center;
         font-size: rem(23);
-        .fa {
-            display: flex;     
+        background: $gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        &:hover{
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            @include anim-pulsate;
+            animation: pulsate 0.5s infinite;
         }
+    }
+    .fa, .fas {
+        display: flex;
     }
 }

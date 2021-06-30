@@ -17,3 +17,17 @@
 @mixin padding($screen) {
     padding: 0 map-get($padding, $screen);
 }
+
+@mixin anim-pulsate {
+    @keyframes pulsate {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.5);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+}
