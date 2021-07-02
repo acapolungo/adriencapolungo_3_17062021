@@ -4,20 +4,8 @@
     background: $grey-bg;
     &__img {
         width: 100%;
-        width: 100%;
         height: rem(260);
-        &.menu1 {
-            @include resto-img(menu1)
-        }
-        &.menu2 {
-            @include resto-img(menu2)
-        }
-        &.menu3 {
-            @include resto-img(menu3)
-        }
-        &.menu4 {
-            @include resto-img(menu4)
-        }
+        @include bg-img($bg-url);
     }
     .container-resto {
         width: 100%;
@@ -83,7 +71,7 @@
                 margin-bottom: rem(3);
             }
             &__ing {
-                font-size: rem(14);
+                font-size: rem(13.5);
             }
             &__price {
                 display: flex;
@@ -91,7 +79,7 @@
                 height: rem(58);
                 padding: rem(9.5);
                 p {
-                    font-size: rem(14);
+                    font-size: rem(13.5);
                     font-weight: 800;
                     align-self: flex-end;
                 }

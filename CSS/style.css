@@ -51,6 +51,7 @@ body {
   width: 23.4375rem;
   height: 63px;
   margin: 0 auto;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,6 +60,40 @@ body {
   font-family: "Shrikhand", "cursive";
   text-align: center;
   width: 100%;
+}
+.header__back {
+  position: absolute;
+  left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+}
+.header__back :before {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #7e7e7e;
+}
+.header__back__sec, .header__back__thi {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  transition: all 0.2 ease-in-out;
+}
+.header__back__sec:hover, .header__back__thi:hover {
+  transform: scaleX(50%);
+  left: 2.5rem;
+}
+.header__back__sec :before, .header__back__thi :before {
+  position: absolute;
+  color: #7e7e7e;
+  transform: translate(-50%, -50%);
 }
 
 .footer {
@@ -305,20 +340,19 @@ body {
 }
 .main-resto__img {
   width: 100%;
-  width: 100%;
   height: 16.25rem;
 }
-.main-resto__img.menu1 {
-  background: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") center/cover;
+.main-resto__img--menu1 {
+  background: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg) center/cover;
 }
-.main-resto__img.menu2 {
-  background: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg") center/cover;
+.main-resto__img--menu2 {
+  background: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg) center/cover;
 }
-.main-resto__img.menu3 {
-  background: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg") center/cover;
+.main-resto__img--menu3 {
+  background: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg) center/cover;
 }
-.main-resto__img.menu4 {
-  background: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg") center/cover;
+.main-resto__img--menu4 {
+  background: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg) center/cover;
 }
 .main-resto .container-resto {
   width: 100%;
@@ -384,7 +418,7 @@ body {
   margin-bottom: 0.1875rem;
 }
 .main-resto .container-resto .resto__ing {
-  font-size: 0.875rem;
+  font-size: 0.84375rem;
 }
 .main-resto .container-resto .resto__price {
   display: flex;
@@ -393,7 +427,7 @@ body {
   padding: 0.59375rem;
 }
 .main-resto .container-resto .resto__price p {
-  font-size: 0.875rem;
+  font-size: 0.84375rem;
   font-weight: 800;
   align-self: flex-end;
 }
