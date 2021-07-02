@@ -1,0 +1,18 @@
+.discover {
+    width: 100%;
+    background: $grey-bg;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    @include padding(mobile);
+    &__title {
+        font-size: rem(28);
+        margin-top: rem(44.5);
+        margin-bottom: rem(21.5);
+    }
+    p {
+        font-size: 1.1rem;
+        font-weight: 400;
+        margin-bottom: rem(34);
+    }
+}

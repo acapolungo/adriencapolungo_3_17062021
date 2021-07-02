@@ -1,0 +1,16 @@
+$colour-primary: #9356DC;
+$colour-secondary: #FF79DA;
+$colour-tertiary: #99E2D0;
+$gradient: linear-gradient(165deg, $colour-secondary, $colour-primary);
+
+$grey-loc: #eaeaea;
+$grey-bg: #f6f6f6;
+$grey-footer: #353535;
+$grey-icon: #7e7e7e;
+
+$padding: (
+  mobileresto: 15px,
+  mobile: 20px,
+  tablet: 30px,
+  desktop: 40px
+);

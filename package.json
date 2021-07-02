@@ -1,0 +1,21 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./CSS/style.css",
+    "prefix": "postcss ./CSS/style.css --use autoprefixer -d ./CSS/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acapolungo/adriencapolungo_3_17062021.git"
+  },
+  "author": "adrien capolungo",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/acapolungo/adriencapolungo_3_17062021/issues"
+  },
+  "homepage": "https://github.com/acapolungo/adriencapolungo_3_17062021#readme"
+}

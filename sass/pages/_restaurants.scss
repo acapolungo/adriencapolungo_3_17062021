@@ -1,0 +1,98 @@
+.main-resto {
+    width: rem(375);
+    margin: 0 auto;
+    background: $grey-bg;
+    &__img {
+        width: 100%;
+        height: rem(260);
+        @include bg-img($bg-url);
+    }
+    .container-resto {
+        width: 100%;
+        background: $grey-bg;
+        position: relative;
+        top: rem(-41);
+        @include padding(mobileresto);
+        border-top-left-radius: rem(30);
+        border-top-right-radius: rem(30);
+        z-index: 100;
+        .name {
+            display: flex;
+            font-size: rem(16);
+            padding-top: rem(25);
+            &__title {
+                font-size: rem(28);
+                width: 100%;
+                font-family: 'Shrikhand',"cursive";
+                padding-left: rem(5);
+            }
+        }
+        &__heart {
+            width: 25%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .resto {
+            &__title {
+                padding-top: rem(42);
+                font-size: rem(16);
+                font-weight: 400;
+                text-transform: uppercase;
+                padding-left: rem(5);
+                padding-bottom: rem(14);
+            }
+            h3::after {
+                content: "";
+                display: block;
+                height: rem(3);
+                width: rem(40);
+                background: $colour-tertiary ;
+                margin-top: rem(9);
+            }
+            &__card {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                cursor: pointer;
+                width: rem(322);
+                border-radius: rem(15);
+                margin-left: rem(15);
+                margin-bottom: rem(22.5);
+                @include box-shadow-mod;
+            }
+            &__info {
+                padding: rem(9.5);
+                width: 85%;
+            }
+            &__name {
+                font-size: rem(16);
+                margin-bottom: rem(3);
+            }
+            &__ing {
+                font-size: rem(13.5);
+            }
+            &__price {
+                display: flex;
+                align-items: center;
+                height: rem(58);
+                padding: rem(9.5);
+                p {
+                    font-size: rem(13.5);
+                    font-weight: 800;
+                    align-self: flex-end;
+                }
+            }
+            &__anim {
+                display: none;
+            }
+        }
+    }
+    .order {
+        text-align: center;
+        &__btn {
+            padding: rem(15) rem(50);
+        }
+    }
+}
