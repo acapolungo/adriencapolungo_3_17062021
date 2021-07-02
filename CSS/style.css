@@ -12,11 +12,11 @@ html, body {
 a {
   text-decoration: none;
 }
-a:active {
-  color: #FF79DA;
-}
 a:visited {
   color: #ffffff;
+}
+a:active {
+  color: #9356DC;
 }
 
 li {
@@ -119,10 +119,8 @@ body {
   flex-wrap: wrap;
 }
 .footer__link {
-  width: 100%;
-}
-.footer__link a:visited {
   color: #ffffff;
+  width: 100%;
 }
 .footer__icon {
   width: 1.4375rem;

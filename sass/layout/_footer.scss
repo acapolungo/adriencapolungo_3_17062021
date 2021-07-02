@@ -20,10 +20,8 @@
         flex-wrap: wrap;
     }
     &__link {
+        color: #ffffff;
         width: 100%;
-        a:visited {
-            color: #ffffff;
-        }
     }
     &__icon {
         width: rem(23);
