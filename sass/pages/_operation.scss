@@ -3,6 +3,7 @@
     @include padding(mobile);
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
     @include tablet-only {
         justify-content: space-between;
     }
@@ -53,6 +54,8 @@
         @include tablet-only {
             height: 100%;
             border-radius: rem(15) 0 0 rem(15);
+            font-size: rem(60);
+            font-weight: 900;
         }
     }
     &__icon {

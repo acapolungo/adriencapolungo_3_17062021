@@ -229,6 +229,7 @@ body {
   padding: 0 20px;
   display: flex;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .operation {
@@ -288,6 +289,8 @@ body {
   .operation__num {
     height: 100%;
     border-radius: 0.9375rem 0 0 0.9375rem;
+    font-size: 3.75rem;
+    font-weight: 900;
   }
 }
 .operation__icon {
