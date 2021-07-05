@@ -3,7 +3,11 @@
     @include padding(mobile);
     display: flex;
     flex-wrap: wrap;
+    @include tablet-only {
+        justify-content: space-between;
+    }
     &__title {
+        width: 100%;
         padding-top: rem(53);
         font-size: rem(28);
         margin-bottom: rem(33);
@@ -11,6 +15,7 @@
     &__item {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         position: relative;
         cursor: pointer;
         width: rem(322);
@@ -19,17 +24,36 @@
         padding: rem(20);
         margin-left: rem(15);
         margin-bottom: rem(22.5);
+        text-align: center;
+        .fa, .far, .fas {
+            line-height: 0.7;
+        }
         @include box-shadow-mod;
+        @include smartphone {
+            width: 100%;
+        }
+        @include tablet-only {
+            width: 30%;
+            padding: 0;
+            justify-content: center;
+        }
     }
     &__num {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: absolute;
-        left: -10px;
+        left: rem(-10);
         color: #ffffff;
         background-color: $colour-primary;
         width: rem(22);
         height: rem(22);
         line-height: rem(22);
         border-radius: 50%;
+        @include tablet-only {
+            height: 100%;
+            border-radius: rem(15) 0 0 rem(15);
+        }
     }
     &__icon {
         display: flex;
@@ -39,6 +63,14 @@
         height: rem(10);
         font-size: rem(16);
         color: $grey-icon;
+        @include tablet-only {
+            font-size: rem(20);
+            background: linear-gradient(#ffffff 50%, $grey-bg);
+            width: 100%;
+            padding: rem(15);
+            height: 50%;
+            text-align: center;
+        }
     }
     &__info {
         width: 75%;
@@ -46,5 +78,8 @@
     &__txt{
         font-size: rem(16);
         font-weight: 600;
+        @include tablet-only {
+            padding: rem(15);
+        }
     }
 }

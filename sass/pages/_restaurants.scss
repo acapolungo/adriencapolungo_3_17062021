@@ -7,6 +7,16 @@
         height: rem(260);
         @include bg-img($bg-url);
     }
+    @include smartphone {
+        width: 100%;
+    }
+    @include tablet-only {
+        width: 100%;
+        max-width: 1024px;
+    }
+    @include desktop {
+        max-width: 1440px;
+    }
     .container-resto {
         width: 100%;
         background: $grey-bg;
@@ -16,7 +26,14 @@
         border-top-left-radius: rem(30);
         border-top-right-radius: rem(30);
         z-index: 100;
+        @include tablet-only {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            @include padding(tablet);
+        }
         .name {
+            width: 100%;
             display: flex;
             font-size: rem(16);
             padding-top: rem(25);
@@ -34,7 +51,17 @@
             align-items: center;
         }
         .resto {
+            display: flex;
+            flex-wrap: wrap;
+            gap: rem(10);
+            @include tablet-only {
+                flex-direction: column;
+                justify-content: space-between;
+                width: 31.5%;
+                gap: rem(25);
+            }
             &__title {
+                width: 100%;
                 padding-top: rem(42);
                 font-size: rem(16);
                 font-weight: 400;
@@ -56,15 +83,19 @@
                 align-items: center;
                 position: relative;
                 cursor: pointer;
-                width: rem(322);
+                width: 100%;
                 border-radius: rem(15);
-                margin-left: rem(15);
-                margin-bottom: rem(22.5);
+                padding-left: rem(15);
+                padding-right: rem(22.5);
                 @include box-shadow-mod;
+                @include tablet-only {
+                    min-height: rem(92);
+                }
             }
             &__info {
-                padding: rem(9.5);
-                width: 85%;
+                padding: rem(9.5) 0;
+                width: 80%;
+                height: 100%;
             }
             &__name {
                 font-size: rem(16);
@@ -74,14 +105,13 @@
                 font-size: rem(13.5);
             }
             &__price {
+                height: 100%;
                 display: flex;
-                align-items: center;
-                height: rem(58);
-                padding: rem(9.5);
+                align-items: flex-end;
+                padding-bottom: rem(9.5);
                 p {
                     font-size: rem(13.5);
                     font-weight: 800;
-                    align-self: flex-end;
                 }
             }
             &__anim {

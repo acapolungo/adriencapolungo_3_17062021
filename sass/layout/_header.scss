@@ -6,6 +6,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include smartphone {
+        width: 100%;
+    }
+    @include tablet-only {
+        max-width: 1024px;
+    }
+    @include desktop {
+        max-width: 1440px;
+    }
     &__logo {
         font-family: 'Shrikhand',"cursive";
         text-align: center;

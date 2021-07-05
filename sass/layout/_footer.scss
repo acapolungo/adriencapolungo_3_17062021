@@ -8,20 +8,46 @@
     @include padding(mobile);
     text-align: start;
     padding: rem(25);
+    @include smartphone {
+        width: 100%;
+    }
+    @include tablet-only {
+        width: 100%;
+        max-width: 1024px;
+    }
+    @include desktop {
+        width: 100%;
+        max-width: 1440px;
+    }
     &__logo {
         text-align: start;
         font-size: rem(20);
         color: #ffffff;
         font-family: 'Shrikhand',"cursive";
         width: 100%;
+        @include tablet-only {
+            font-size: rem(25);
+        }
     }
     &__list {
         display: flex;
         flex-wrap: wrap;
+        @include tablet-only {
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+        @include desktop {
+            max-width: 1024px;
+        }
     }
     &__link {
         color: #ffffff;
         width: 100%;
+        @include tablet-only {
+            width: auto;
+        }
     }
     &__icon {
         width: rem(23);

@@ -58,13 +58,19 @@ $bg-url: (
   }
 }
 
+@mixin smartphone {
+    @media (min-width: 321px) {
+        @content;
+    }
+}
+
 @mixin tablet-only {
     @media (min-width: 768px) {
         @content;
     }
 }
 
-@mixin laptop {
+@mixin desktop {
     @media (min-width: 1440px) {
         @content;
     }
