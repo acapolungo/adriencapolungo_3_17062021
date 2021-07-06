@@ -4,6 +4,9 @@
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
+    @include smartphone {
+        justify-content: center;
+    }
     @include tablet-only {
         justify-content: space-between;
     }
@@ -15,26 +18,26 @@
     }
     &__item {
         display: flex;
-        align-items: center;
         flex-wrap: wrap;
         position: relative;
         cursor: pointer;
         width: rem(322);
+        height: rem(75);
         background: $grey-bg;
         border-radius: rem(15);
-        padding: rem(20);
+        padding: rem(28);
         margin-left: rem(15);
         margin-bottom: rem(22.5);
         text-align: center;
-        .fa, .far, .fas {
-            line-height: 0.7;
-        }
         @include box-shadow-mod;
         @include smartphone {
-            width: 100%;
+            width: 60%;
+            min-width: rem(312);
         }
         @include tablet-only {
             width: 30%;
+            min-width: 30%;
+            min-height: rem(108);
             padding: 0;
             justify-content: center;
         }
@@ -62,17 +65,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 23%;
-        height: rem(10);
+        width: rem(50);
         font-size: rem(16);
         color: $grey-icon;
         @include tablet-only {
             font-size: rem(20);
             background: linear-gradient(#ffffff 50%, $grey-bg);
             width: 100%;
-            padding: rem(15);
             height: 50%;
-            text-align: center;
+            padding-top: rem(20);
         }
     }
     &__info {
@@ -82,7 +83,7 @@
         font-size: rem(16);
         font-weight: 600;
         @include tablet-only {
-            padding: rem(15);
+            padding-bottom: rem(0);
         }
     }
 }
