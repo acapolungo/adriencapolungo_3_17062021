@@ -4,13 +4,16 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    text-align: center;
     @include padding(mobile);
     &__title {
+        width: 100%;
         font-size: rem(28);
         margin-top: rem(44.5);
         margin-bottom: rem(21.5);
     }
     p {
+        width: 100%;
         font-size: 1.1rem;
         font-weight: 400;
         margin-bottom: rem(34);

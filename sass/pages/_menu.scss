@@ -1,7 +1,16 @@
 .main {
     width: rem(375);
     margin: 0 auto;
-    text-align: center;
+    @include smartphone {
+        width: 100%;
+    }
+    @include tablet-only {
+        width: 100%;
+        max-width: 1024px;
+    }
+    @include desktop {
+        max-width: 1440px;
+    }
 }
 
 .menu {
@@ -11,7 +20,12 @@
     align-items: center;
     background: $grey-bg;
     @include padding(mobile);
+    @include tablet-only {
+        justify-content: space-between;
+        @include padding(tablet);
+    }
     &__title {
+        width: 100%;
         padding-top: rem(60);
         margin-bottom: rem(28);
     }
@@ -22,6 +36,9 @@
         margin-bottom: rem(18);
         border-radius: rem(12);
         @include box-shadow;
+        @include tablet-only {
+            width: 49%;
+        }
     }
     a {
         color: #ffffff;
@@ -42,6 +59,7 @@
     &__new {
         position: absolute;
         font-size: rem(14);
+        text-align: center;
         font-weight: 600;
         right: rem(12);
         top: rem(12);
