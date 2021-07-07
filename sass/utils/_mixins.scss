@@ -1,9 +1,9 @@
-@mixin box-shadow ($color : rgba(100, 100, 111, 0.3)){
-    box-shadow: $color 0px 3px 10px 0px;
+@mixin box-shadow ($color : rgba(0, 0, 0, 0.06)){
+    box-shadow: 0 5px 4px $color;
 }
 
 @mixin box-shadow-mod ($color: lighten(rgba(100, 100, 111, 0.5), 20%)) {
-    box-shadow: $color 0px 3px 10px 0px;
+    box-shadow: 0px 3px 10px 0px $color;
 }
 
 @mixin one-edge-shadow ($color : rgba(149, 157, 165, 0.5)) {

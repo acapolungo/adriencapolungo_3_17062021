@@ -6,6 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include box-shadow;
     @include smartphone {
         width: 100%;
     }

@@ -40,12 +40,12 @@ body {
   background: linear-gradient(165deg, #FF79DA, #9356DC);
   margin-bottom: 3.53125rem;
   cursor: pointer;
-  box-shadow: rgba(100, 100, 111, 0.3) 0px 3px 10px 0px;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.06);
   transition: all 0.2s ease-out;
 }
 .discover__btn:hover, .order__btn:hover {
   background: linear-gradient(165deg, #ff93e1, #ae80e5);
-  box-shadow: rgba(27, 27, 31, 0.5) 0px 3px 10px 0px;
+  box-shadow: 0px 3px 10px 0px rgba(27, 27, 31, 0.5);
   transform: scale(1.05);
 }
 
@@ -57,6 +57,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.06);
 }
 @media (min-width: 321px) {
   .header {
@@ -190,7 +191,6 @@ body {
   background: #eaeaea;
   width: 100%;
   height: 49.5px;
-  box-shadow: inset 0 8px 6px -6px rgba(149, 157, 165, 0.5);
 }
 .local__icon {
   font-size: 1.0625rem;
@@ -261,7 +261,7 @@ body {
   padding: 1.75rem;
   margin-bottom: 1.40625rem;
   text-align: center;
-  box-shadow: rgba(151, 151, 162, 0.5) 0px 3px 10px 0px;
+  box-shadow: 0px 3px 10px 0px rgba(151, 151, 162, 0.5);
   transition: transform 0.2s ease-out;
 }
 .operation__item::before {
@@ -278,7 +278,7 @@ body {
 }
 .operation__item:hover {
   transform: scale(1.05);
-  box-shadow: rgba(52, 52, 57, 0.5) 0px 3px 10px 0px;
+  box-shadow: 0px 3px 10px 0px rgba(52, 52, 57, 0.5);
 }
 .operation__item:hover::before {
   width: 100%;
@@ -400,7 +400,7 @@ body {
   margin-bottom: 1.125rem;
   border-radius: 0.75rem;
   transition: transform 0.2s ease-in-out;
-  box-shadow: rgba(100, 100, 111, 0.3) 0px 3px 10px 0px;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.06);
 }
 @media (min-width: 768px) {
   .menu__cards {
@@ -409,7 +409,7 @@ body {
 }
 .menu__cards:hover {
   transform: scale(1.01);
-  box-shadow: rgba(52, 52, 57, 0.5) 0px 3px 10px 0px;
+  box-shadow: 0px 3px 10px 0px rgba(52, 52, 57, 0.5);
 }
 .menu a {
   color: #ffffff;
@@ -640,7 +640,7 @@ body {
   overflow: hidden;
   border-radius: 0.9375rem;
   padding-left: 0.9375rem;
-  box-shadow: rgba(151, 151, 162, 0.5) 0px 3px 10px 0px;
+  box-shadow: 0px 3px 10px 0px rgba(151, 151, 162, 0.5);
   opacity: 0;
   animation-name: fadein;
   animation-timing-function: ease-in;
