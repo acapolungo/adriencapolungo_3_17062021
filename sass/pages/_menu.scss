@@ -35,9 +35,14 @@
         height: rem(251.5);
         margin-bottom: rem(18);
         border-radius: rem(12);
+        transition: transform .2s ease-in-out;
         @include box-shadow;
         @include tablet-only {
             width: 49%;
+        }
+        &:hover {
+            transform: scale(1.01);
+            @include box-shadow-mod($color: darken(rgba(100, 100, 111, 0.5), 20%));
         }
     }
     a {
@@ -96,28 +101,57 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        
+        font-size: rem(25);
+        position: relative;
         .heart__icon {
-        font-size: rem(23);
-        background: $gradient;
+        position: relative;
+        width: rem(50);
+        height: rem(50);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #000;
         background-clip: text;
+        -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
-        transition: background-color 0.5s ease;
-        &::before {
-            padding: rem(2);
+        transition: opacity 1s;
+        &::after {
+            content: "\f004";
+            font-weight: 600;
+            position: absolute;
+            left: 25%;
+            transform: translateX(-50%);
+            color: transparent;
+            background: $gradient;
+            background-clip: text;
+            background-size: 100% 200%;
+            background-position: bottom;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            opacity: 0;
+            transition: opacity 0.5s, transform 0.5s, font-weight 0.5s;
+            transform: scale(0);
+            transform-origin: bottom;
         }
         &:hover {
-            padding: rem5(2);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            @include anim-pulsate;
-            animation: pulsate 0.5s infinite;
-            font-weight: 900;
+            &::before {
+                opacity: 1;
+                font-weight: 600;
+                background: darken($color: $colour-primary, $amount: 20%);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+            }
+            &::after {
+                opacity: 1;
+                @include beat-anim;
+                animation: beat 1s infinite;
+            }
         }
         }
+        
     }
-    .fa, .far {
+    .far, .fas {
         display: flex;
     }
 }

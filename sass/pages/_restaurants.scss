@@ -87,6 +87,18 @@
                 border-radius: rem(15);
                 padding-left: rem(15);
                 @include box-shadow-mod;
+                // gestion de l'animation fadein
+                @include fadein-anim;
+                opacity:0;
+                animation-name: fadein;
+                animation-timing-function: ease-in;
+                animation-fill-mode: both;
+                @for $i from 1 through 9 {
+                    &--#{$i}{
+                        // units are in the variable so SCSS just does math
+                        animation-delay: #{$i*$timeOffset};
+                    }
+                }
                 @include smartphone {
                     width: 90%;
                     margin: 0 auto;
@@ -140,7 +152,6 @@
             }
             &__anim .resto__icon {
                 transform: rotate(180deg);
-                
                 transition: transform 280ms ease-in-out, margin-right 280ms ease-in-out;
                 margin-right: rem(-20);
             }
