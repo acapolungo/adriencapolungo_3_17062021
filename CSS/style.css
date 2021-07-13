@@ -105,7 +105,7 @@ body {
   font-size: 1.25rem;
   color: #9356DC;
   opacity: 0;
-  transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
 }
 .header__arrow:hover::before {
   opacity: 0;
@@ -121,14 +121,11 @@ body {
   }
   50% {
     left: 2.8125rem;
-    transform: translate(-50%, -50%);
-    font-size: 1.25rem;
-    color: #bc95e9;
+    transform: translate(-50%, -50%) scale(1.2);
   }
   100% {
     left: 2.5rem;
     transform: translate(-50%, -50%);
-    color: #782cd3;
   }
 }
 
