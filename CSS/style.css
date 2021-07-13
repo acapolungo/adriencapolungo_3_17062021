@@ -105,7 +105,7 @@ body {
   font-size: 1.25rem;
   color: #9356DC;
   opacity: 0;
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-out;
 }
 .header__arrow:hover::before {
   opacity: 0;
@@ -117,18 +117,18 @@ body {
 @keyframes arrow {
   0% {
     left: 2.5rem;
-    transform-origin: right;
     transform: translate(-50%, -50%);
   }
-  25% {
-    left: 1.875rem;
+  50% {
+    left: 2.8125rem;
     transform: translate(-50%, -50%);
     font-size: 1.25rem;
+    color: #bc95e9;
   }
   100% {
     left: 2.5rem;
     transform: translate(-50%, -50%);
-    font-size: 1.5625rem;
+    color: #782cd3;
   }
 }
 

@@ -129,20 +129,18 @@ $bg-url: (
     @keyframes arrow {
         0% {
             left: rem(40);
-            transform-origin: right;
             transform: translate(-50%,-50%);
         }
-        25% {
-            left: rem(30);
+        50% {
+            left: rem(45);
             transform: translate(-50%,-50%);
             font-size: rem(20);
-            
+            color: lighten($colour-primary, 15%);    
         }
         100% {
             left: rem(40);
             transform: translate(-50%,-50%);
-            font-size: rem(25);
-            
+            color: darken($colour-primary, 10%);   
         }
       }
 }
