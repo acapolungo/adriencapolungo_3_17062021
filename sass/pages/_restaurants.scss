@@ -2,6 +2,7 @@
     width: rem(375);
     margin: 0 auto;
     background: $grey-bg;
+    flex: 1;
     &__img {
         width: 100%;
         height: rem(260);
@@ -25,12 +26,14 @@
         @include padding(mobileresto);
         border-top-left-radius: rem(30);
         border-top-right-radius: rem(30);
-        z-index: 100;
         @include tablet-only {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             @include padding(tablet);
+        }
+        @include desktop {
+            @include padding(desktop);
         }
         .name {
             width: 100%;
@@ -55,6 +58,11 @@
             flex-wrap: wrap;
             gap: rem(10);
             @include tablet-only {
+                margin: 0 auto;
+                width: 75%;
+                gap: rem(25);
+            }
+            @include laptop {
                 flex-direction: column;
                 justify-content: space-between;
                 width: 31.5%;
@@ -80,32 +88,27 @@
             &__card {
                 display: flex;
                 align-items: center;
-                position: relative;
                 cursor: pointer;
                 width: 100%;
+                max-width: 100%;
+                height: rem(68.5);
                 overflow: hidden;
                 border-radius: rem(15);
-                padding-left: rem(15);
+                padding-right: rem(16);
                 @include box-shadow-mod;
                 // gestion de l'animation fadein
                 @include fadein-anim;
-                opacity:0;
                 animation-name: fadein;
-                animation-timing-function: ease-in;
+                animation-timing-function: cubic-bezier(.05,.43,.58,-0.05);
+                animation-duration: .3s;
                 animation-fill-mode: both;
-                @for $i from 1 through 9 {
-                    &--#{$i}{
-                        // units are in the variable so SCSS just does math
-                        animation-delay: #{$i*$timeOffset};
-                    }
-                }
+                @include transition;
                 @include smartphone {
                     width: 90%;
                     margin: 0 auto;
                 }
                 @include tablet-only {
                     width: 100%;
-                    min-height: rem(92);
                 }
                 &:hover .resto__anim {
                     width: 20%;
@@ -116,51 +119,57 @@
                 }
             }
             &__info {
-                width: 100%;
-                padding: rem(9.5) 0;
-                height: 100%;
+                flex: 1;
+                padding: rem(16) rem(0) rem(16) rem(16);
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
             }
             &__name {
                 font-size: rem(16);
                 margin-bottom: rem(3);
+                text-overflow: ellipsis;
+                overflow: hidden;
             }
             &__ing {
-                font-size: rem(13.5);
+                font-size: rem(15);
+                text-overflow: ellipsis;
+                overflow: hidden;
             }
             &__price {
                 height: 100%;
                 display: flex;
                 align-items: flex-end;
-                padding-bottom: rem(9.5);
-                padding-right: rem(22.5);
-                p {
-                    font-size: rem(13.5);
-                    font-weight: 800;
-                }
+                font-size: rem(15);
+                font-weight: 700;
+                padding: rem(16)rem(16);
             }
             &__anim {
-                display: inline-flex;
-                width: 0%;
+                display: flex;
+                width: 0;
                 height: 100%;
-                border-radius: rem(0) rem(15) rem(15) rem(0);
+                margin-right: rem(-16);
                 background-color: $colour-tertiary;
                 color: #ffffff;
-                font-size: rem(20);
+                font-size: rem(30);
                 justify-content: center;
                 align-items: center;
-                transition: width 280ms ease-out;
+                transition: width .5s ease-out, margin .5s ease-out;
             }
-            &__anim .resto__icon {
-                transform: rotate(180deg);
-                transition: transform 280ms ease-in-out, margin-right 280ms ease-in-out;
-                margin-right: rem(-20);
+            &__icon {
+                margin-right: rem(-30);
+                transform: rotate(360deg);
+                transition: transform .5s ease-out;
             }
         }
     }
     .order {
-        text-align: center;
+        height: 15vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         &__btn {
-            padding: rem(15) rem(50);
+            padding: rem(15) rem(40);
         }
     }
 }

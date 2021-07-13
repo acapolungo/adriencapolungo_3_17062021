@@ -1,6 +1,7 @@
 .main {
     width: rem(375);
     margin: 0 auto;
+    flex: 1;
     @include smartphone {
         width: 100%;
     }
@@ -23,6 +24,9 @@
     @include tablet-only {
         justify-content: space-between;
         @include padding(tablet);
+    }
+    @include desktop{
+        @include padding(desktop);
     }
     &__title {
         width: 100%;
@@ -97,12 +101,20 @@
         font-size: rem(17.5);
     }
     &__heart{
-        width: 25%;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: rem(25);
         position: relative;
+        @include smartphone {
+            width: 25%;  
+        }
+        @include tablet-only {
+            width: 5%;
+        }
+        @include desktop {
+            width: 10%;
+        }
         .heart__icon {
         position: relative;
         width: rem(50);
@@ -135,7 +147,6 @@
         }
         &:hover {
             &::before {
-                opacity: 1;
                 font-weight: 600;
                 background: darken($color: $colour-primary, $amount: 20%);
                 background-clip: text;

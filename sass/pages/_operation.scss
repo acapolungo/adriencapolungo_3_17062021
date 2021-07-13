@@ -11,6 +11,9 @@
         @include padding(tablet);
         justify-content: space-between;
     }
+    @include desktop{
+        @include padding(desktop);
+    }
     &__title {
         width: 100%;
         padding-top: rem(53);
@@ -40,6 +43,7 @@
             width: rem(0);
             height: 100%;
             opacity: 0.2;
+            border-radius: rem(15);
             background: $colour-primary;
             transition: width .2s ease-out;
         }
@@ -51,7 +55,22 @@
                 height: 100%;
                 border-radius: rem(15);
             }
-            
+            .operation__icon{
+                color: $colour-primary;
+                font-size: rem(25);
+            }
+            .operation__txt{
+                letter-spacing: rem(1);
+            }
+            @include smartphone {
+                .operation__icon{
+                    font-size: rem(20);
+                }
+                .operation__txt{
+                    letter-spacing: rem(0.2);
+                }
+
+            }
         }
         @include smartphone {
             width: 60%;
@@ -76,13 +95,14 @@
         width: rem(22);
         height: rem(22);
         line-height: rem(22);
-        border-radius: 50%;
-        overflow: hidden;
+        border-radius: rem(15);
         @include tablet-only {
-            height: 100%;
-            border-radius: rem(15) 0 0 rem(15);
-            font-size: rem(60);
+            border-radius: 50%;
+            width: rem(40);
+            height: rem(40);
+            font-size: rem(40);
             font-weight: 900;
+            margin-top: rem(-10);
         }
     }
     &__icon {
@@ -92,6 +112,7 @@
         font-size: rem(16);
         color: $grey-icon;
         width: rem(50);
+        transition: font-size .5s;
         @include tablet-only {
             font-size: rem(20);
             background: linear-gradient(#ffffff 50%, $grey-bg);
@@ -107,6 +128,7 @@
     &__txt{
         font-size: rem(16);
         font-weight: 600;
+        transition: letter-spacing .5s;
         @include tablet-only {
             padding-bottom: rem(0);
         }

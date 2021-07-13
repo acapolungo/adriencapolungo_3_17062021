@@ -13,8 +13,12 @@ $padding: (
   mobileresto: 15px,
   mobile: 20px,
   tablet: 30px,
-  desktop: 40px
+  laptop: 30px,
+  desktop: 100px
 );
 
 // Gestion de l'animation Fadein
-$timeOffset: 0.2s;
+$timeOffset: 0.3s;
+
+// Gestion de l'animation laoder
+$delay: 1000ms;
