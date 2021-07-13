@@ -125,6 +125,28 @@ $bg-url: (
       }
 }
 
+@mixin arrow-anim {
+    @keyframes arrow {
+        0% {
+            left: rem(40);
+            transform-origin: right;
+            transform: translate(-50%,-50%);
+        }
+        25% {
+            left: rem(30);
+            transform: translate(-50%,-50%);
+            font-size: rem(20);
+            
+        }
+        100% {
+            left: rem(40);
+            transform: translate(-50%,-50%);
+            font-size: rem(25);
+            
+        }
+      }
+}
+
 @mixin load {
     @keyframes load {
         80% {
