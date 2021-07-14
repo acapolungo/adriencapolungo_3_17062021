@@ -44,8 +44,3 @@
   Validation W3C HTML : à passer, warning autorisés<br/>
   Validation W3C CSS : à passer, warning autorisés<br/>
   Compatibilité : Dernières versions de Chrome, Firefox & Safari
-
-
-### Validation W3C :
-[HTML du site](https://validator.w3.org/nu/?doc=https%3A%2F%2Facapolungo.github.io%2Fadriencapolungo_3_17062021%2F) <br/>
-[CSS du site](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Facapolungo.github.io%252Fadriencapolungo_3_17062021%252F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=fr)

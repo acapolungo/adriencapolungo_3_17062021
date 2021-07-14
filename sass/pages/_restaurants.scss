@@ -68,7 +68,6 @@
             }
             @include laptop {
                 flex-direction: column;
-                justify-content: space-between;
                 width: 31.5%;
                 gap: rem(25);
             }

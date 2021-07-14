@@ -50,7 +50,7 @@ $bg-url: (
 }
 
 @mixin transition {
-    @for $i from 1 through 9 {
+    @for $i from 1 through 10 {
         &--#{$i}{
             // units are in the variable so SCSS just does math
             animation-delay: #{$i*$timeOffset};
