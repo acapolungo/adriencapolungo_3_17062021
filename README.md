@@ -29,7 +29,7 @@
 3. Interdit: Javascript / Frameworks CSS / Inline CSS
 
 ### Polices :
-  Logo & titres: Shrikhand
+  Logo & titres: Shrikhand<br/>
   Texte: Roboto
 
 ### Couleurs :
