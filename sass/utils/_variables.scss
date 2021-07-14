@@ -2,6 +2,7 @@ $colour-primary: #9356DC;
 $colour-secondary: #FF79DA;
 $colour-tertiary: #99E2D0;
 $gradient: linear-gradient(165deg, $colour-secondary, $colour-primary);
+$gradientanim: linear-gradient(to top, 165deg, $colour-secondary, $colour-primary);
 
 $grey-loc: #eaeaea;
 $grey-bg: #f6f6f6;
@@ -12,5 +13,12 @@ $padding: (
   mobileresto: 15px,
   mobile: 20px,
   tablet: 30px,
-  desktop: 40px
+  laptop: 30px,
+  desktop: 100px
 );
+
+// Gestion de l'animation Fadein
+$timeOffset: 0.3s;
+
+// Gestion de l'animation laoder
+$delay: 1000ms;

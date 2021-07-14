@@ -6,7 +6,6 @@
     display: flex;
     flex-wrap: wrap;
     @include padding(mobile);
-    text-align: start;
     padding: rem(25);
     @include smartphone {
         width: 100%;
@@ -14,13 +13,14 @@
     @include tablet-only {
         width: 100%;
         max-width: 1024px;
+        padding: rem(25) rem(30);
     }
     @include desktop {
         width: 100%;
         max-width: 1440px;
+        padding: rem(25) rem(40);
     }
     &__logo {
-        text-align: start;
         font-size: rem(20);
         color: #ffffff;
         font-family: 'Shrikhand',"cursive";
@@ -45,6 +45,9 @@
     &__link {
         color: #ffffff;
         width: 100%;
+        & a:hover {
+            color: $colour-primary;
+        }
         @include tablet-only {
             width: auto;
         }

@@ -2,13 +2,17 @@
     width: 100%;
     @include padding(mobile);
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    overflow: hidden;
     @include smartphone {
         justify-content: center;
     }
     @include tablet-only {
+        @include padding(tablet);
         justify-content: space-between;
+    }
+    @include desktop{
+        @include padding(desktop);
     }
     &__title {
         width: 100%;
@@ -26,10 +30,48 @@
         background: $grey-bg;
         border-radius: rem(15);
         padding: rem(28);
-        margin-left: rem(15);
         margin-bottom: rem(22.5);
         text-align: center;
         @include box-shadow-mod;
+        transition: transform .2s ease-out;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-right: rem(-15);
+            width: rem(0);
+            height: 100%;
+            opacity: 0.2;
+            border-radius: rem(15);
+            background: $colour-primary;
+            transition: width .2s ease-out;
+        }
+        &:hover {
+            transform: scale(1.05);
+            @include box-shadow-mod($color: darken(rgba(100, 100, 111, 0.5), 20%));
+            &::before {
+                width: 100%;
+                height: 100%;
+                border-radius: rem(15);
+            }
+            .operation__icon{
+                color: $colour-primary;
+                font-size: rem(20);
+            }
+            .operation__txt{
+                letter-spacing: rem(0.2);
+            }
+            @include tablet-only {
+                .operation__icon{
+                    font-size: rem(25);
+                }
+                .operation__txt{
+                    letter-spacing: rem(1);
+                }
+
+            }
+        }
         @include smartphone {
             width: 60%;
             min-width: rem(312);
@@ -47,33 +89,37 @@
         justify-content: center;
         align-items: center;
         position: absolute;
-        left: rem(-10);
+        left: rem(-15);
         color: #ffffff;
         background-color: $colour-primary;
         width: rem(22);
         height: rem(22);
         line-height: rem(22);
-        border-radius: 50%;
+        border-radius: rem(15);
         @include tablet-only {
-            height: 100%;
-            border-radius: rem(15) 0 0 rem(15);
-            font-size: rem(60);
+            border-radius: 50%;
+            width: rem(40);
+            height: rem(40);
+            font-size: rem(40);
             font-weight: 900;
+            margin-top: rem(-10);
         }
     }
     &__icon {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: rem(50);
         font-size: rem(16);
         color: $grey-icon;
+        width: rem(50);
+        transition: font-size .5s;
         @include tablet-only {
             font-size: rem(20);
             background: linear-gradient(#ffffff 50%, $grey-bg);
             width: 100%;
             height: 50%;
             padding-top: rem(20);
+            border-radius: rem(15);
         }
     }
     &__info {
@@ -82,6 +128,7 @@
     &__txt{
         font-size: rem(16);
         font-weight: 600;
+        transition: letter-spacing .5s;
         @include tablet-only {
             padding-bottom: rem(0);
         }
