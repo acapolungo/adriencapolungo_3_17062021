@@ -311,17 +311,17 @@ body {
 }
 .operation__item:hover .operation__icon {
   color: #9356DC;
-  font-size: 1.5625rem;
+  font-size: 1.25rem;
 }
 .operation__item:hover .operation__txt {
-  letter-spacing: 0.0625rem;
+  letter-spacing: 0.0125rem;
 }
-@media (min-width: 321px) {
+@media (min-width: 768px) {
   .operation__item:hover .operation__icon {
-    font-size: 1.25rem;
+    font-size: 1.5625rem;
   }
   .operation__item:hover .operation__txt {
-    letter-spacing: 0.0125rem;
+    letter-spacing: 0.0625rem;
   }
 }
 @media (min-width: 321px) {
@@ -516,21 +516,7 @@ body {
   align-items: center;
   font-size: 1.5625rem;
   position: relative;
-}
-@media (min-width: 321px) {
-  .menu__heart {
-    width: 25%;
-  }
-}
-@media (min-width: 768px) {
-  .menu__heart {
-    width: 5%;
-  }
-}
-@media (min-width: 1440px) {
-  .menu__heart {
-    width: 10%;
-  }
+  flex: 1;
 }
 .menu__heart .heart__icon {
   position: relative;
@@ -654,12 +640,15 @@ body {
   display: flex;
   font-size: 1rem;
   padding-top: 1.5625rem;
+  padding-right: 0.9375rem;
 }
 .main-resto .container-resto .name__title {
   font-size: 1.75rem;
   width: 100%;
   font-family: "Shrikhand", "cursive";
   padding-left: 0.3125rem;
+  padding-top: 0.3125rem;
+  white-space: nowrap;
 }
 .main-resto .container-resto__heart {
   width: 25%;
@@ -671,6 +660,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 0.625rem;
+  padding-bottom: 0.75rem;
 }
 @media (min-width: 768px) {
   .main-resto .container-resto .resto {
@@ -687,6 +677,11 @@ body {
     gap: 1.5625rem;
   }
 }
+@media (min-width: 1440px) {
+  .main-resto .container-resto .resto {
+    padding-bottom: 0rem;
+  }
+}
 .main-resto .container-resto .resto__title {
   width: 100%;
   padding-top: 2.625rem;
@@ -694,7 +689,6 @@ body {
   font-weight: 400;
   text-transform: uppercase;
   padding-left: 0.3125rem;
-  padding-bottom: 0.875rem;
 }
 .main-resto .container-resto .resto h3::after {
   content: "";
@@ -762,13 +756,8 @@ body {
 }
 @media (min-width: 321px) {
   .main-resto .container-resto .resto__card {
-    width: 90%;
-    margin: 0 auto;
-  }
-}
-@media (min-width: 768px) {
-  .main-resto .container-resto .resto__card {
     width: 100%;
+    margin: 0 auto;
   }
 }
 .main-resto .container-resto .resto__card:hover .resto__anim {

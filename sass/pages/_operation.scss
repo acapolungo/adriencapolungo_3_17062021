@@ -57,17 +57,17 @@
             }
             .operation__icon{
                 color: $colour-primary;
-                font-size: rem(25);
+                font-size: rem(20);
             }
             .operation__txt{
-                letter-spacing: rem(1);
+                letter-spacing: rem(0.2);
             }
-            @include smartphone {
+            @include tablet-only {
                 .operation__icon{
-                    font-size: rem(20);
+                    font-size: rem(25);
                 }
                 .operation__txt{
-                    letter-spacing: rem(0.2);
+                    letter-spacing: rem(1);
                 }
 
             }

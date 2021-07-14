@@ -106,15 +106,7 @@
         align-items: center;
         font-size: rem(25);
         position: relative;
-        @include smartphone {
-            width: 25%;  
-        }
-        @include tablet-only {
-            width: 5%;
-        }
-        @include desktop {
-            width: 10%;
-        }
+        flex: 1;
         .heart__icon {
         position: relative;
         width: rem(50);
