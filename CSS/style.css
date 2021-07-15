@@ -398,7 +398,7 @@ body {
 .main {
   width: 23.4375rem;
   margin: 0 auto;
-  flex: 1;
+  background: #f6f6f6;
 }
 @media (min-width: 321px) {
   .main {
@@ -414,6 +414,11 @@ body {
 @media (min-width: 1440px) {
   .main {
     max-width: 1440px;
+  }
+}
+@media (min-width: 2560px) {
+  .main {
+    flex: 1;
   }
 }
 
@@ -455,6 +460,11 @@ body {
     width: 49%;
   }
 }
+@media (min-width: 2560px) {
+  .menu__cards {
+    height: 25vh;
+  }
+}
 .menu__cards:hover {
   transform: scale(1.01);
   box-shadow: 0px 3px 10px 0px rgba(52, 52, 57, 0.5);
@@ -467,6 +477,11 @@ body {
 .menu__img {
   width: 100%;
   height: 10.9375rem;
+}
+@media (min-width: 2560px) {
+  .menu__img {
+    height: 80%;
+  }
 }
 .menu__img img {
   width: 100%;
@@ -529,7 +544,7 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  transition: opacity 1s;
+  transition: opacity 1s ease-out;
 }
 .menu__heart .heart__icon::after {
   content: "";
@@ -539,9 +554,9 @@ body {
   transform: translateX(-50%);
   color: transparent;
   background: linear-gradient(165deg, #FF79DA, #9356DC);
-  background-clip: text;
   background-size: 100% 200%;
   background-position: bottom;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   opacity: 0;
@@ -635,6 +650,11 @@ body {
     padding: 0 100px;
   }
 }
+@media (min-width: 2560px) {
+  .main-resto .container-resto {
+    justify-content: center;
+  }
+}
 .main-resto .container-resto .name {
   width: 100%;
   display: flex;
@@ -649,6 +669,11 @@ body {
   padding-left: 0.3125rem;
   padding-top: 0.3125rem;
   white-space: nowrap;
+}
+@media (min-width: 2560px) {
+  .main-resto .container-resto .name {
+    width: 60%;
+  }
 }
 .main-resto .container-resto__heart {
   width: 25%;
@@ -679,6 +704,11 @@ body {
 @media (min-width: 1440px) {
   .main-resto .container-resto .resto {
     padding-bottom: 0rem;
+  }
+}
+@media (min-width: 2560px) {
+  .main-resto .container-resto .resto {
+    width: 60%;
   }
 }
 .main-resto .container-resto .resto__title {
@@ -820,6 +850,11 @@ body {
 }
 .main-resto .order__btn {
   padding: 0.9375rem 2.5rem;
+}
+@media (min-width: 2560px) {
+  .main-resto .order {
+    height: 10vh;
+  }
 }
 
 .sectionloader {

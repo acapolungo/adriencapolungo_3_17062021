@@ -81,6 +81,11 @@ $bg-url: (
         @content;
     }
 }
+@mixin fourk {
+    @media (min-width: 2560px) {
+        @content;
+    }
+}
 
 @mixin beat-anim {
     @keyframes beat {
