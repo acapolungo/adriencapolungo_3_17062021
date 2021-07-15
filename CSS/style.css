@@ -39,7 +39,7 @@ body {
   border: none;
   text-align: center;
   padding: 1rem;
-  color: #ffffff;
+  color: #fff;
   border-radius: 1.5625rem;
   background: linear-gradient(165deg, #FF79DA, #9356DC);
   cursor: pointer;
@@ -672,7 +672,6 @@ body {
 @media (min-width: 1024px) {
   .main-resto .container-resto .resto {
     flex-direction: column;
-    justify-content: space-between;
     width: 31.5%;
     gap: 1.5625rem;
   }
@@ -753,6 +752,9 @@ body {
 }
 .main-resto .container-resto .resto__card--9 {
   animation-delay: 2.7s;
+}
+.main-resto .container-resto .resto__card--10 {
+  animation-delay: 3s;
 }
 @media (min-width: 321px) {
   .main-resto .container-resto .resto__card {
