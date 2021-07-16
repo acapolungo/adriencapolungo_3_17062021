@@ -1,7 +1,6 @@
 .main {
     width: rem(375);
     margin: 0 auto;
-    background: $grey-bg;
     @include smartphone {
         width: 100%;
     }

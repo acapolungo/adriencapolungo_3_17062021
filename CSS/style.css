@@ -398,7 +398,6 @@ body {
 .main {
   width: 23.4375rem;
   margin: 0 auto;
-  background: #f6f6f6;
 }
 @media (min-width: 321px) {
   .main {
